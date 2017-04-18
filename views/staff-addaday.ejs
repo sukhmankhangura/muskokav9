@@ -1,0 +1,28 @@
+<% include ./partials/header.ejs %>
+
+
+<main class="container">
+    <h1>Add a New Camp</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="campName" class="col-sm-2 control-label">Camp Title: *</label>
+            <input name="campName" id="campName" required type="text"/>
+        </div>
+        <div class="form-group">
+            <label for="date" class="col-sm-2 control-label">Date: *</label>
+            <input name="date" id="date" type="date" required min="2017-01-01" max="2100-01-01"/>
+        </div>
+        <div class="form-group">
+            <label for="maxcampers" class="col-sm-2 control-label">Maximum Number of Campers: *</label>
+            <input name="maxcampers" id="maxcampers" type="number" required min="1" max="35"/>
+        </div>
+        <div>
+        <button class="btn btn-success col-sm-offset-2">Create</button>
+        </div>  
+    </form>
+<a href="/staff-logout" role="button" class="btn btn-primary">Logout</a>
+
+</main>
+
+<% include ./partials/footer.ejs %>

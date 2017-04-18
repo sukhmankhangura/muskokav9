@@ -1,0 +1,67 @@
+<% include ./partials/header.ejs %>
+<a href="/staff-logout" role="button" class="btn btn-primary pull-right">Logout</a>
+
+<img src="images/newicons/dashboard.png" height="80" width="80" href="/staff-dashboard">
+  <h1 class="text-center"><%= title %></h1>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a  class="nav-link active" href="/staff-dashboard">Home</a>
+      </li>
+    <li class="nav-item">
+      <a  class="nav-link" href="/staff-camper-registration">Registration</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="/staff-camper-profiles">Camper Profiles</a>
+        </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="/staff-payment">Payment</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="/camper-reports">Reports</a>
+      </li>
+  </ul>
+<br>
+
+<div class="col-md-6">
+<img src="images/newicons/addcamper.png" height="50" width="50">
+<a href="/add-camper">Add A New Camper</a><br>
+</div>
+
+<div class="col-md-6">
+<img src="images/newicons/addday.png" height="50" width="50">
+<a href="/add-camp-day">Add a Camp Day</a><br>
+</div>
+
+
+<div class="col-md-6">
+  <br>
+<img src="images/newicons/payment.png" height="50" width="50">
+<a href="/staff-payment">Payment</a><br>
+</div>
+
+<div class="col-md-6">
+  <br>
+<img src="images/newicons/archieve.png" height="50" width="50">
+<a href="/staff-camp-archive">DAILY CAMPER ARCHIVE</a><br>
+</div>
+
+<div class="col-md-6">
+  <br>
+<img src="images/newicons/report.png" height="50" width="50">
+<a href="/staff-signinOut-reports">PARENT SIGN IN / OUT REPORTS</a><br>
+</div>
+
+
+
+<div class="col-md-6">
+  <br>
+<img src="images/newicons/stats.ico" height="50" width="50">
+<a href="/camper-reports#">Stats</a><br>
+</div>
+
+
+
+
+
+<% include ./partials/footer.ejs %>

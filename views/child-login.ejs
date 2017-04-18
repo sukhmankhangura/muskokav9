@@ -1,0 +1,30 @@
+<% include ./partials/header.ejs %>
+
+    <h1 class="text-center"><%= title %></h1>
+    <div class="col-md-12" >
+            <div id="logbox"  >
+    <form method="post">
+      <div class="form-group">
+        <div class="block">
+            <input type="text" class="form-control input pass" placeholder="First name" aria-describedby="basic-addon1" required>
+        </div>
+    <br/>
+      <div class="block">
+        <input type="text" class="form-control input pass" placeholder="Last name" aria-describedby="basic-addon1" required>
+      </div>
+
+
+       <button id="success" type="button" class="inputButton">Add a child</button>
+  </div>
+
+    </form>
+</div>
+<br>
+<a href="/">Return to homepage</a>
+</div>
+
+
+
+<% include ./partials/successModal.ejs %>
+
+<% include ./partials/footer.ejs %>

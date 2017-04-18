@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Camp Details</title>
+  <link rel='stylesheet' href='../stylesheets/style.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<section>
+  <div class="row">
+    <h1 class="blue">Camp details</h1>
+
+    <div class="col-sm-12">
+      <form method="post" class="form-horizontal">
+        <fieldset>
+          <div class="col-sm-8">
+            <h3>Update Camp Information</h3>
+            <div class="form-group">
+              <label for="campName" class="col-sm-5 control-label">Camp Name: *</label>
+              <div>
+                <input name="campName" id="campName" required value="<%= Camp.campName %>"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="date" class="col-sm-5 control-label">Date: *</label>
+              <input name="date" id="date" required value="<%= Camp.date %>"/>
+            </div>
+          </div><!-- ./col 6 -->
+        </fieldset>
+
+        <a role="button" class="btn btn-primary pull-center " href="/camp-detail">GO BACK</a>
+        <button class="btn btn-primary pull-right col-sm-offset-2 space">SAVE</button>
+      </form>
+    </div><!-- .col -->
+
+  </div>
+
+</section>
+
+
+
+
+
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single Camper Profile</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<a href="/staff-logout" role="button" class="btn btn-primary pull-right">Logout</a>
+<h1 class="text-center"></h1>
+
+  <h2>Pick a Camp Date</h2>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a  class="nav-link" href="/staff-dashboard">Home</a>
+      </li>
+    <li class="nav-item">
+      <a  class="nav-link active" href="/staff-camper-registration">Registration</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="/staff-camper-profiles">Camper Profiles</a>
+        </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="/staff-payment">Payment</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="/camper-reports">Reports</a>
+      </li>
+  </ul>
+  <br>
+  <a href="/add-camp-day">Add a Camp Day</a>
+<div class="">
+ <table class="table table-striped table-hover">
+    <tr>
+        <th class="text-center">Camp Name</th>
+        <th class="text-center">Date</th>
+        <th class="text-center">Actions</th>
+    </tr>
+
+         <% for (var i = 0; i < Camp.length; i++) { %>
+         <tr>
+             <td class="text-center"><a href="camp-detail"><%= Camp[i].campName %></a></td>
+             <td><%= Camp[i].date %></td>
+             <td class="text-center">
+                 <a href="/camp-edit/<%= Camp[i]._id %>" class="btn btn-info">Edit</a>
+                 <a href="/camp-delete/<%= Camp[i]._id %>" class="btn btn-danger confirmation">Delete</a>
+             </td>
+         </tr>
+         <% } %>
+     </table>
+
+
+</div>
+
+
+<a  role="button" class="btn btn-primary" href="/staff-dashboard">Go Back</a>
+
+
+
+
+<% include ./partials/footer.ejs %>

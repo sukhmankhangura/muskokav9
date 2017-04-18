@@ -1,0 +1,27 @@
+<% include ./partials/header.ejs %>
+
+      <h1 class="text-center"><%= title %></h1>
+
+      <div class="logo text-center item">
+        <img src="/images/logo-blue.png" alt="Muskoka discoovery center logo" height="160px" >
+      </div>
+
+      <div class="item-overlay top"></div>
+      </div>
+
+      <h2 class="text-center">Please Pick a profile</h2>
+      <div class="text-center" id="calltoaction">
+        <button  id="success"  data-toggle="modal" data-target="#modal-1" role="button" class="btn btn-primary">Parents</button>
+          <button id="success" data-toggle="modal" data-target="#modal-2" role="button" class="btn btn-primary">Staff</button>
+      </div>
+
+
+
+
+<!-- register or log-in modal-->
+<% include ./partials/staff-reg-or-login.ejs %>
+
+<!-- child sign-in/sign-out modal -->
+<% include ./partials/parent-modal.ejs %>
+
+<% include ./partials/footer.ejs %>

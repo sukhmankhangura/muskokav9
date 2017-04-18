@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Single Camper Profile</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<section>
+    <div class="row">
+      <h1 class="blue">Camper details</h1>
+
+      <div class="col-sm-12">
+        <form method="post" class="form-horizontal" encType="multipart/form-data">
+          <fieldset>
+            <div class="col-sm-6">
+              <h3>Child Information</h3>
+                <div class="form-group">
+                  <label for="firstName" class="col-sm-5 control-label">First Name: *</label>
+                    <div>
+                      <input name="firstName" id="firstName" required value="<%= Camper.firstName %>"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="col-sm-5 control-label">Last Name: *</label>
+                  <input name="lastName" id="lastName" required value="<%= Camper.lastName %>"/>
+                </div>
+                <div class="form-group">
+                  <label for="age" class="col-sm-5 control-label">Age: *</label>
+                  <input name="age" id="age" required value="<%= Camper.age %>"/>
+                </div>
+                <div class="form-group">
+                  <label for="note" class="col-sm-5 control-label">Notes:</label>
+                  <input name="note" id="note" type="textarea" value="<%= Camper.note %>"/>
+                </div>
+                <div class="form-group">
+                  <label for="editCamperProfileImg" class="col-sm-6 control-label">Profile Picture: </label>
+                  <input type="file" name="editCamperProfileImg" id="editCamperProfileImg" />
+                </div>
+              </div><!-- ./col 6 -->
+              <div class="col-sm-6">
+                        <h3>Contact Information</h3>
+                <div class="form-group">
+                  <label for="parentFirstName" class="col-sm-5 control-label">Parent First Name: *</label>
+                    <div>
+                      <input name="parentFirstName" id="parentFirstName" required value="<%= Camper.parentFirstName %>"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label for="parentLastName" class="col-sm-5 control-label">Parent Last Name: *</label>
+                  <input name="parentLastName" id="parentLastName" required value="<%= Camper.parentLastName %>"/>
+                </div>
+                <div class="form-group">
+                  <label for="phoneNum" class="col-sm-5 control-label">Phone: *</label>
+                  <input name="phoneNum" id="phoneNum" required value="<%= Camper.phoneNum %>"/>
+                </div>
+                <div class="form-group">
+                  <label for="address" class="col-sm-5 control-label">Address: *</label>
+                  <input name="address" id="address" required value="<%= Camper.address %>"/>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="col-sm-5 control-label">Email:</label>
+                  <input name="email" id="email" value="<%= Camper.email %>"/>
+                </div>
+              </div>
+  </fieldset>
+
+
+          </fieldset>
+          <a role="button" class="btn btn-primary pull-center " href="/staff-camper-profiles">GO BACK</a>
+          <button class="btn btn-primary pull-right col-sm-offset-2 space">SAVE</button>
+        </form>
+      </div><!-- .col -->
+
+    </div>
+
+</section>
+
+
+
+
+
+<% include ./partials/footer.ejs %>

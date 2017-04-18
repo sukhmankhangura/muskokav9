@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single Camper Profile</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <section>
+      <div class="row">
+        <div class="col-sm-4">
+            <img  class="image-profile thumbnail text-center" src="/uploads/<%= Camper.fileupload %>" width="180px" height="200px" alt="Profile Image Not Set"/>
+            <a type="button" name="button" href="../edit/<%= Camper._id %>" class="btn btn-primary">Edit Profile</a>
+        </div>
+        <div class="col-sm-8 align-left">
+            <h2><%= Camper.firstName %>  <%= Camper.lastName %></h2>
+            <ul>
+              <li>Age: <%= Camper.age %></li>
+                <li>Notes: <%= Camper.note %></li>
+                <li>Parent Name: <%= Camper.parentFirstName %> <%= Camper.parentLastName %></li>
+                <li>Phone: <%= Camper.phoneNum %></li>
+                <li>Address: <%= Camper.address %></li>
+                <li>Email: <%= Camper.email %></li>
+            </ul>
+
+        </div>
+          <a role="button" class="btn btn-primary pull-bottom pull-right" href="/staff-camper-profiles">Go Back To Camper Profiles</a>
+    </div>
+  </section>
+
+
+
+
+
+
+  <% include ./partials/footer.ejs %>

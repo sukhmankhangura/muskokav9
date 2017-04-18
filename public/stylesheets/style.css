@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Enriqueta');
+
+html{
+  background-image: url('/images/bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+     background-position: center;
+
+     -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+html, body {
+    font-family: 'Enriqueta', serif !important;
+    text-transform: uppercase !important;
+    height: 100%;
+    overflow: scroll;
+    color: #000000 !important;
+    position: relative;
+}
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    max-width: 768px;
+    margin: 5% auto!important;
+    border-radius: 5px;
+    max-height: 85%;
+}
+
+h1 {
+    font-family: 'Cinzel', serif !important;
+}
+
+header {
+    height: 200px;
+    background-image: url('/images/muskokaBanner.png');
+    text-align: center;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.block {
+    display: inline-block;
+    width: 100%;
+    margin: 5% 0;
+}
+
+a.nav-link.active {
+    border: 2px solid #efefef;
+    background: #efefef;
+}
+
+.blue {
+    color: blue;
+}
+.space {
+    margin-right: 2%;
+}
+
+/* single-camper-button fix */
+.pull-bottom{
+    margin-top: 30%;
+}
+
+/*global buttons*/
+.btn-primary {
+    color: #fff;
+    background-color: #215D8F!important;
+    border: none!important;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #BA3531!important;
+      transition: all 0.5s ease;
+}
+.btn-primary[data-target="#modal-1"]{
+  width: 100px;
+}
+.btn-primary[data-target="#modal-2"]{
+  width: 100px;
+}
+
+#camperProfileImg{
+    border: #000 solid 1px;
+    margin: 5%;
+    padding: 5%;
+}
+
+#editCamperProfileImg{
+    border: #000 solid 1px;
+    margin: 5%;
+    padding: 5%;
+}
+
+/*==================================================
+=            Media Queries             =
+==================================================*/
+/*  Desktops */
+  @media only screen and (max-width : 992px) {
+
+  }
+
+  /*  Tablets */
+  @media only screen and (max-width : 768px) {
+    .logo{
+      display: none;
+    }
+  }
+
+  /* Phones */
+  @media only screen and (max-width : 480px) {
+
+  }

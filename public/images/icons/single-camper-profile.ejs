@@ -1,0 +1,29 @@
+<% include ./partials/header.ejs %>
+
+
+  <h1 class="text-center"><%= title %></h1>
+
+      <div class="profile">
+
+          <img align="left" class="image-profile thumbnail" src="http://placehold.it/180x180" alt="Profile image example"/>
+          <div class="profile-text">
+            <% for (var i = 0; i < camper.length; i) { %>
+
+                  <td><%= camper[i].firstName %></td>
+                  <td><%= camper[i].lastName %></td>
+
+
+                
+            <% } %>
+
+
+             <h1><%= camper.firstName %></h1>
+            <p><%= camper.lastName %></p>
+          </div>
+      </div>
+
+
+
+<a   role="button" class="btn btn-primary" href="/staff-camper-profiles">Go Back</a>
+
+  <% include ./partials/footer.ejs %>
